@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-cloud-employee
+  profiles: default
+  cloud:
+    config:
+      uri: http://localhost:9000
