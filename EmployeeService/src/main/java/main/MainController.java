@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @Value("${spring.datasource.driver-class-name}")
-    private String driverClassName;
-
     @RequestMapping("/showConfig")
     @ResponseBody
     public String main() {
