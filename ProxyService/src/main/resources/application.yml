@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+  profiles: default
+  cloud:
+    config:
+      uri: http://localhost:9000
+server:
+  port: 8090
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer0-eureka-server.com:9020/eureka/, http://peer1-eureka-server.com:9021/eureka/, http://peer2-eureka-server.com:9022/eureka/
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enable: false
+zuul:
+  routes:
+    employeeUI:
+      serviceId: spring-cloud-employee
+
